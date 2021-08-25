@@ -1,0 +1,14 @@
+<html>
+<head>
+  <script src="/dist/tesseract.dev.js"></script>
+</head>
+<body style="background: #333;">
+<script>
+  Tesseract.mouseGesture({
+    element: document,
+    langPath: 'http://localhost:3300/tests/assets/traineddata',
+    corePath: '../../node_modules/tesseract.js-core/tesseract-core.wasm.js',
+  }).then(console.log)
+</script>
+</body>
+</html>
