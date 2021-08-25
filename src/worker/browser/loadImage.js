@@ -1,5 +1,5 @@
-const resolveURL = require('resolve-url');
-const blueimpLoadImage = require('blueimp-load-image');
+import resolveURL from 'resolve-url';
+import blueimpLoadImage from 'blueimp-load-image';
 
 /**
  * readFromBlobOrFile
@@ -98,4 +98,4 @@ const loadImage = async (image) => {
   return new Uint8Array(data);
 };
 
-module.exports = loadImage;
+export default loadImage;

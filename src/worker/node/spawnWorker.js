@@ -1,4 +1,4 @@
-const { fork } = require('child_process');
+import { fork } from 'child_process';
 
 let debugPort = 9229;
 
@@ -9,7 +9,7 @@ let debugPort = 9229;
  * @function fork a new process in node
  * @access public
  */
-module.exports = ({ workerPath }) => {
+export default ({ workerPath }) => {
   debugPort += 1;
   return fork(workerPath, { execArgv: [`--debug-port=${debugPort}`] });
 };

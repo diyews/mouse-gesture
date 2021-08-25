@@ -1,5 +1,3 @@
-const OEM = require('./OEM');
+import OEM from './OEM';
 
-module.exports = {
-  defaultOEM: OEM.DEFAULT,
-};
+export const defaultOEM = OEM.DEFAULT;

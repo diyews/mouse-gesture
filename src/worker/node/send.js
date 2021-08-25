@@ -5,6 +5,6 @@
  * @function send packet to worker and create a job
  * @access public
  */
-module.exports = (worker, packet) => {
+export default (worker, packet) => {
   worker.send(packet);
 };

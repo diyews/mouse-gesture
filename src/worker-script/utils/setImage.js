@@ -1,5 +1,5 @@
-const bmp = require('bmp-js');
-const fileType = require('file-type');
+import bmp from 'bmp-js';
+import fileType from 'file-type';
 
 /**
  * setImage
@@ -8,7 +8,7 @@ const fileType = require('file-type');
  * @function set image in tesseract for recognition
  * @access public
  */
-module.exports = (TessModule, api, image) => {
+export default (TessModule, api, image) => {
   const buf = Buffer.from(Array.from({ ...image, length: Object.keys(image).length }));
   const type = fileType(buf);
   let bytesPerPixel = 0;

@@ -7,21 +7,25 @@
  * @author Guillermo Webster <gui@mit.edu>
  * @author Jerome Wu <jeromewus@gmail.com>
  */
-require('regenerator-runtime/runtime');
-const createScheduler = require('./createScheduler');
-const createWorker = require('./createWorker');
-const Tesseract = require('./Tesseract');
-const languages = require('./constants/languages');
-const OEM = require('./constants/OEM');
-const PSM = require('./constants/PSM');
-const { setLogging } = require('./utils/log');
+import 'regenerator-runtime/runtime';
 
-module.exports = {
+import createScheduler from './createScheduler';
+import createWorker from './createWorker';
+import Tesseract from './Tesseract';
+import languages from './constants/languages';
+import OEM from './constants/OEM';
+import PSM from './constants/PSM';
+import { setLogging } from './utils/log';
+
+const { recognize, detect } = Tesseract;
+
+export {
   languages,
   OEM,
   PSM,
   createScheduler,
   createWorker,
   setLogging,
-  ...Tesseract,
+  recognize,
+  detect,
 };

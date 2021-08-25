@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   /*
    * default path for downloading *.traineddata
    */

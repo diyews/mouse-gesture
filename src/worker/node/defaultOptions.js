@@ -1,10 +1,10 @@
-const path = require('path');
-const defaultOptions = require('../../constants/defaultOptions');
+import path from 'path';
+import defaultOptions from '../../constants/defaultOptions';
 
 /*
  * Default options for node worker
  */
-module.exports = {
+export default {
   ...defaultOptions,
   workerPath: path.join(__dirname, '..', '..', 'worker-script', 'node', 'index.js'),
 };

@@ -1,21 +1,16 @@
-const resolvePaths = require('./utils/resolvePaths');
-const circularize = require('./utils/circularize');
-const createJob = require('./createJob');
-const { log } = require('./utils/log');
-const getId = require('./utils/getId');
-const { defaultOEM } = require('./constants/config');
-const {
-  defaultOptions,
-  spawnWorker,
-  terminateWorker,
-  onMessage,
-  loadImage,
-  send,
-} = require('./worker/node');
+import resolvePaths from './utils/resolvePaths';
+import circularize from './utils/circularize';
+import createJob from './createJob';
+import { log } from './utils/log';
+import getId from './utils/getId';
+import { defaultOEM } from './constants/config';
+import {
+  defaultOptions, spawnWorker, terminateWorker, onMessage, loadImage, send
+} from './worker/node';
 
 let workerCounter = 0;
 
-module.exports = (_options = {}) => {
+export default (_options = {}) => {
   const id = getId('Worker', workerCounter);
   const {
     logger,

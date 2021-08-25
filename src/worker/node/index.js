@@ -7,14 +7,15 @@
  * @author Guillermo Webster <gui@mit.edu>
  * @author Jerome Wu <jeromewus@gmail.com>
  */
-const defaultOptions = require('./defaultOptions');
-const spawnWorker = require('./spawnWorker');
-const terminateWorker = require('./terminateWorker');
-const onMessage = require('./onMessage');
-const send = require('./send');
-const loadImage = require('./loadImage');
+import defaultOptions from './defaultOptions';
 
-module.exports = {
+import spawnWorker from './spawnWorker';
+import terminateWorker from './terminateWorker';
+import onMessage from './onMessage';
+import send from './send';
+import loadImage from './loadImage';
+
+export {
   defaultOptions,
   spawnWorker,
   terminateWorker,

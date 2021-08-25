@@ -1,8 +1,8 @@
-const util = require('util');
-const fs = require('fs');
-const fetch = require('node-fetch');
-const isURL = require('is-url');
-const jo = require('jpeg-autorotate');
+import util from 'util';
+import fs from 'fs';
+import fetch from 'node-fetch';
+import isURL from 'is-url';
+import jo from 'jpeg-autorotate';
 
 const readFile = util.promisify(fs.readFile);
 
@@ -13,7 +13,7 @@ const readFile = util.promisify(fs.readFile);
  * @function load image from different source
  * @access public
  */
-module.exports = async (image) => {
+export default async (image) => {
   let data = image;
   if (typeof image === 'undefined') {
     return image;

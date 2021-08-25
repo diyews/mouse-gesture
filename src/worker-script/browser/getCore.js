@@ -1,4 +1,4 @@
-module.exports = (corePath, res) => {
+export default (corePath, res) => {
   if (typeof global.TesseractCore === 'undefined') {
     res.progress({ status: 'loading tesseract core', progress: 0 });
     global.importScripts(corePath);

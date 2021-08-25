@@ -1,11 +1,11 @@
-const resolveURL = require('resolve-url');
-const { version, dependencies } = require('../../../package.json');
-const defaultOptions = require('../../constants/defaultOptions');
+import resolveURL from 'resolve-url';
+import { version, dependencies } from '../../../package.json';
+import defaultOptions from '../../constants/defaultOptions';
 
 /*
  * Default options for browser worker
  */
-module.exports = {
+export default {
   ...defaultOptions,
   workerPath: (typeof process !== 'undefined' && process.env.TESS_ENV === 'development')
     ? resolveURL(`/dist/worker.dev.js?nocache=${Math.random().toString(36).slice(3)}`)

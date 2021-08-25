@@ -1,6 +1,6 @@
-const isElectron = require('is-electron');
+import isElectron from 'is-electron';
 
-module.exports = (key) => {
+export default (key) => {
   const env = {};
 
   if (typeof WorkerGlobalScope !== 'undefined') {

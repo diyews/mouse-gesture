@@ -7,15 +7,17 @@
  * @author Guillermo Webster <gui@mit.edu>
  * @author Jerome Wu <jeromewus@gmail.com>
  */
-require('regenerator-runtime/runtime');
-const fileType = require('file-type');
-const isURL = require('is-url');
-const dump = require('./utils/dump');
-const isWebWorker = require('../utils/getEnvironment')('type') === 'webworker';
-const setImage = require('./utils/setImage');
-const defaultParams = require('./constants/defaultParams');
-const { log, setLogging } = require('../utils/log');
+import 'regenerator-runtime/runtime';
 
+import fileType from 'file-type';
+import isURL from 'is-url';
+import dump from './utils/dump';
+import getEnvironment from '../utils/getEnvironment';
+import setImage from './utils/setImage';
+import defaultParams from './constants/defaultParams';
+import { log, setLogging } from '../utils/log';
+
+const isWebWorker = getEnvironment('type') === 'webworker';
 /*
  * Tesseract Module returned by TesseractCore.
  */
@@ -269,7 +271,7 @@ const terminate = (_, res) => {
  * @param {object} data.payload - data for the job
  * @param {function} send - trigger job to work
  */
-exports.dispatchHandlers = (packet, send) => {
+export const dispatchHandlers = (packet, send) => {
   const res = (status, data) => {
     send({
       ...packet,
@@ -309,6 +311,6 @@ exports.dispatchHandlers = (packet, send) => {
  * @access public
  * @param {object} adapter - implementation of the worker, different in browser and node environment
  */
-exports.setAdapter = (_adapter) => {
+export const setAdapter = (_adapter) => {
   adapter = _adapter;
 };

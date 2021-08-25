@@ -8,10 +8,11 @@
  * @author Jerome Wu <jeromewus@gmail.com>
  */
 
-const worker = require('..');
-const getCore = require('./getCore');
-const gunzip = require('./gunzip');
-const cache = require('./cache');
+import * as worker from '..';
+
+import getCore from './getCore';
+import gunzip from './gunzip';
+import cache from './cache';
 
 /*
  * register message handler

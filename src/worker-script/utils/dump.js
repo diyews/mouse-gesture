@@ -37,7 +37,7 @@ const deindent = (html) => {
  * @function dump recognition result to a JSON object
  * @access public
  */
-module.exports = (TessModule, api, {
+export default (TessModule, api, {
   tessjs_create_hocr,
   tessjs_create_tsv,
   tessjs_create_box,
