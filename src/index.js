@@ -16,6 +16,7 @@ import languages from './constants/languages';
 import OEM from './constants/OEM';
 import PSM from './constants/PSM';
 import { setLogging } from './utils/log';
+import { mouseGesture } from './mouse-gesture';
 
 const { recognize, detect } = Tesseract;
 
@@ -28,4 +29,5 @@ export {
   setLogging,
   recognize,
   detect,
+  mouseGesture,
 };
